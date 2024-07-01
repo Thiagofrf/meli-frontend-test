@@ -1,7 +1,10 @@
 const express = require('express');
 const app = express();
+const cors = require('cors');
+import './routes/products'
+import './routes/search'
 
-console.log(app)
+app.use(cors())
 
 app.listen(8080, () => {
     console.log('server listening on port 8080')
