@@ -1,12 +1,21 @@
 import './App.css';
-import Routes from './routes.tsx';
+import { Route, Routes } from "react-router-dom"
+
 import Header from './components/Header/Header.tsx';
+import Home from "./pages/Home/Home.tsx";
+import Search from "./pages/Search/Search.tsx";
+import Product from "./pages/Product/Product.tsx";
 
 function App() {
   return (
     <>
       <Header />
-      <Routes />
+      <Routes>
+          <Route element={<Home />} path="/" />
+          <Route element={<Search />} path="/items?search=:query" />
+          <Route element={<Product />} path="/items/:id" />
+      </Routes>
+        
     </>
   );
 }

@@ -1,8 +1,8 @@
 import axios from 'axios';
-const express = require('express');
+import express from 'express'
 const app = express();
 
-app.get('/api/items/:id', (req, res) => {
+export default app.get('/items/:id', (req, res) => {
     const getQuery = async (body) => {
         const options = {
             'method': 'GET',

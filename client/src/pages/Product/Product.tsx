@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './Product.scss'
 
 const Product = () => {
     return (
         <>
-            TEste
+            Product
         </>
     )
 }
