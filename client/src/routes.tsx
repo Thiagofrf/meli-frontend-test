@@ -1,9 +1,9 @@
 import React from 'react';
 import { Route, Routes } from "react-router-dom"
 
-import Home from "./pages/Home.tsx";
-import Search from "./pages/Search.tsx";
-import Product from "./pages/Product.tsx";
+import Home from "./pages/Home/Home.tsx";
+import Search from "./pages/Search/Search.tsx";
+import Product from "./pages/Product/Product.tsx";
 
 const routes = () => {
     return (
