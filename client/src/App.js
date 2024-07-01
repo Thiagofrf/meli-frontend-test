@@ -1,10 +1,13 @@
 import './App.css';
+import Routes from './routes.tsx';
+import Header from './components/Header/Header.tsx';
 
 function App() {
   return (
-    <div className="App">
-      App
-    </div>
+    <>
+      <Header />
+      <Routes />
+    </>
   );
 }
 
