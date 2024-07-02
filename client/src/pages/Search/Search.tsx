@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import { useSearchParams } from "react-router-dom";
+import { getSearchQuery } from '../../utils/utils';
 import axios from 'axios'
 
 const Search = () => {
     const [productList, setProductList] = useState()
     const [searchParams, setSearchParams] = useSearchParams();
-    
+    const paramsData = searchParams.get("search")
+
     useEffect(() => {
-        searchParams.get("search")
-        // const { data } = axios.get(`/api/items?q=:query`)
-        // if (data) items = data.items;
+        getSearchQuery(paramsData)
     }, [])
 
     return (
