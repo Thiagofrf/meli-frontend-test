@@ -2,15 +2,28 @@
 
 .product-container__description {
     margin-top: 15%;
-    width: 70%;
+    width: 100%;
+
+    @media only screen and (min-width: 768px) {
+        width: 70%;
+    }
 
     P {
         color: $text-c1;
+        font-size: 12px;
+
+        @media only screen and (min-width: 768px) {
+            font-size: 16px;
+        }
 
         &:first-child {
-            font-size: 24px;
+            font-size: 20px;
             font-weight: 500;
             color: $black;
+
+            @media only screen and (min-width: 768px) {
+                font-size: 24px;
+            }
         }
     }
 }
