@@ -1,7 +1,7 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { useSearchParams } from "react-router-dom";
-import SearchCard from '../../components/SearchResultComponents/SearchCard/SearchCard.tsx';
+import SearchCard from '../../components/SearchCard/SearchCard.tsx';
 import './Search.scss'
 
 const Search = () => {
