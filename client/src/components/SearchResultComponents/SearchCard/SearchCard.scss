@@ -1,0 +1,48 @@
+.search-card {
+    &__item {
+        display: flex;
+
+        &:hover {
+            cursor: pointer;
+        }
+        
+        &:not(:last-child) {
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ebebeb;
+        }
+    }
+
+    &__image {
+        width: 120px;
+        height: auto;
+        margin-right: 12px;
+    }
+
+    &__content {
+        width: 55%;
+
+        &--price {
+            font-size: 18px;
+            margin: 10px 0;
+            display: flex;
+            gap: 10px;
+
+            span {
+                background: rgb(0, 184, 0);
+                padding: 0 6px;
+                display: flex;
+                border-radius: 50%;
+
+                svg {
+                    color: #ebebeb;
+                    width: 14px;
+                }
+            }
+        }
+
+        &--title {
+            margin: 10px 0;
+        }
+    }
+}

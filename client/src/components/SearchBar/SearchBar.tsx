@@ -1,18 +1,23 @@
 import React, { useState } from 'react'
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
+import { useNavigate } from 'react-router-dom';
 import './SearchBar.scss'
 
 const SearchBar = () => {
     const [terms, setTerms] = useState('')
+    const navigate = useNavigate()
 
     function onFormSubmit() {
-        return window.location.href = `/items?search=${terms}`
+        navigate(`/items?search=${terms}`)
     }
 
     return (
-        <div 
+        <form 
             className='search-container'
-            onSubmit={onFormSubmit}
+            onSubmit={(e) => {
+                e.preventDefault()
+                onFormSubmit()
+            }}
         >
             <input 
                 type="text" 
@@ -27,7 +32,7 @@ const SearchBar = () => {
             >
                 <SearchOutlinedIcon />
             </button>
-        </div>
+        </form>
     )
 }
 
