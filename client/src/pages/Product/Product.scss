@@ -1,9 +1,9 @@
+@import '../../style/style.scss';
+
 .product-container {
-    background: #fff;
-    width: 70%;
+    @include main-container;
+    
     margin: 40px auto;
-    padding: 24px;
-    border-radius: 5px;
 
     &__main {
         display: flex;

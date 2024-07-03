@@ -1,10 +1,17 @@
+@import '../../style/style.scss';
+
 header {
-    background: #fade00;
+    background: $main_color;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 24px;
     padding: 12px;
+
+    @media only screen and (min-width: 767px) {
+        flex-direction: row;
+    }
 
     img {
         width: 48px;

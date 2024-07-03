@@ -1,15 +1,16 @@
+@import '../../../style/style.scss';
+
 .product-container__description {
     margin-top: 15%;
     width: 70%;
 
     P {
-
-        color: #939393;
+        color: $text-c1;
 
         &:first-child {
             font-size: 24px;
             font-weight: 500;
-            color: #000;
+            color: $black;
         }
     }
 }
