@@ -43,10 +43,10 @@ const Product = () => {
             <div className="product-container">
                 <div className="product-container__main">
                     <ProductImage 
-                        thumbnail={product?.thumbnail}
+                        thumbnail={product?.pictures?.[0].url}
                     />
                     <div className="product-container__main--details">
-                        <p>
+                        <p className='product-container__main--details-condition'>
                             {product?.condition === "new" ? "Novo" : "Usado"}
                         </p>
                         <ProductName 

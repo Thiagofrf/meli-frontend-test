@@ -4,7 +4,7 @@ import './ProductBuyButton.scss'
 const ProductBuyButton = () => {
     return (
         <>
-            <button>
+            <button className='product-buyButton'>
                 Comprar
             </button>
         </>

@@ -6,8 +6,8 @@ const ProductPrice = ({price, currency}) => {
 
     return (
         <>
-            <span>
-                {formattedPrice}
+            <span className='product-price'>
+                $ {formattedPrice}
             </span>
         </>
     )

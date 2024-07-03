@@ -1,14 +1,14 @@
 import React from 'react'
 import './ProductName.scss'
 
-const ProductImage = ({title}) => {
+const ProductName = ({title}) => {
     return (
         <>
-            <h2>
+            <h2 className='product-title'>
                 {title}
             </h2>
         </>
     )
 }
 
-export default ProductImage
+export default ProductName

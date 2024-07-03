@@ -4,7 +4,7 @@ import './ProductImage.scss'
 const ProductImage = ({thumbnail}) => {
     return (
         <>
-            <img src={thumbnail} alt="Imagem do produto" />
+            <img src={thumbnail} alt="Imagem do produto" className='product-image' />
         </>
     )
 }
