@@ -5,6 +5,11 @@
     
     margin: 40px auto;
 
+    &.loading {
+        display: flex;
+        justify-content: center;
+    }
+
     &__main {
         display: flex;
         flex-direction: column;

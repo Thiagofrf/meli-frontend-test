@@ -12,15 +12,15 @@ const Search = () => {
     useEffect(() => {
         async function getSearchQuery(searchParams: string | null) {
             try {
-               const { data } = await axios.get(`https://api.mercadolibre.com/sites/MLA/search?q=${searchParams}`)
-                setProductList(data.results.slice(0, 4))
+               const { data } = await axios.get(`http://localhost:8080/api/items?q=${searchParams}`) 
+                setProductList(data.items)
             } catch(e) {
-                console.log('Error [getSearchParams]', e)
+                console.error('Error [getSearchParamsTest]', e)
             }
         }
 
         getSearchQuery(paramsData)
-    }, [searchParams])
+    }, [searchParams, paramsData])
 
     return (
         <> 
@@ -35,13 +35,14 @@ const Search = () => {
                         {productList?.map((item: any, index: number) => {
                             return (
                                 <SearchCard 
+                                    key={index}
                                     index={index}
                                     id={item?.id}
                                     title={item?.title}
-                                    price={item?.price}
-                                    freeShipping={item?.shipping?.free_shipping}
-                                    thumbnail={item?.thumbnail}
-                                    currency={item?.currency_id}
+                                    price={item?.price?.decimals}
+                                    freeShipping={item?.free_shipping}
+                                    thumbnail={item?.picture}
+                                    currency={item?.price?.currency}
                                 />
                             )
                         })}
